@@ -5,6 +5,7 @@ import { CarsComponent } from './page/cars/cars.component';
 import { CategoryComponent } from './page/category/category.component';
 import { ConnectComponent } from './page/connect/connect.component';
 import { NewCarComponent } from './page/new-car/new-car.component';
+import { NewCategoryComponent } from './page/new-category/new-category.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'AddNewCar',
     component: NewCarComponent,
+  },
+  {
+    path: 'AddNewCategory',
+    component: NewCategoryComponent,
   },
 ];
 
