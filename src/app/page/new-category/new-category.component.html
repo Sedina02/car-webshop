@@ -1,5 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">
+    <img src="assets\img\asad.png" alt="panda" height="50">
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -29,10 +31,10 @@
               <div class="form-group">
                 <label class="bmd-label-floating h5 text-secondary">Name *</label>
                 <input type="text" class="form-control" name="name" required
-                  pattern="^[a-űA-Ű]{5,20}$">
+                  pattern="^[a-űA-Ű]{3,20}$">
               </div>
               <div [hidden]="categoryForm.controls['name']?.valid" class="alert alert-danger" role="alert">
-                The name must be at least 5 letters!
+                The name must be at least 3 letters!
               </div>
             </div>
           </div>
@@ -42,10 +44,10 @@
               <div class="form-group">
                 <label class="bmd-label-floating h5 text-secondary">Description *</label>
                 <input type="text" class="form-control" name="description" required
-                  pattern="^[a-űA-Ű ]{5,30}$">
+                  pattern="^[a-űA-Ű ][0-9]{10,20}$">
               </div>
               <div [hidden]="categoryForm.controls['description']?.valid" class="alert alert-danger" role="alert">
-                The description must be at least 5 letters!
+                The description must be at least 10 letters!
               </div>
             </div>
           </div>

@@ -1,5 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">
+    <img src="assets\img\asad.png" alt="panda" height="50">
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -27,10 +29,10 @@
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                <input type="text" class="form-control" name="name" required pattern="^[a-űA-Ű \-]{5,20}$">
+                <input type="text" class="form-control" name="name" required pattern="^[a-űA-Ű \-]{3,20}$">
               </div>
               <div [hidden]="carForm.controls['name']?.valid" class="alert alert-danger" role="alert">
-                The name must be at least 5 letters!
+                The name must be at least 3 letters!
               </div>
             </div>
           </div>
@@ -39,10 +41,10 @@
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                <input type="text" class="form-control" name="type" required pattern="^[a-űA-Ű\d \-]{5,20}$">
+                <input type="text" class="form-control" name="type" required pattern="^[a-űA-Ű\d \-]{3,20}$">
               </div>
               <div [hidden]="carForm.controls['type']?.valid" class="alert alert-danger" role="alert">
-                The type must be at least 5 letters!
+                The type must be at least 3 letters!
               </div>
             </div>
           </div>
@@ -51,7 +53,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                <input type="number" class="form-control" name="catID" required pattern="^[0-9]{1,5}$">
+                <input type="number" class="form-control" name="catID" required pattern="^[0-9]{1,2}$">
               </div>
               <div [hidden]="carForm.controls['catID']?.valid" class="alert alert-danger" role="alert">
                 The id of the category cannot be empty!
@@ -63,10 +65,10 @@
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                <input type="text" class="form-control" name="description" required pattern="^[a-űA-Ű ]{5,100}$">
+                <input type="text" class="form-control" name="description" required pattern="^[a-űA-Ű ][0-9]{10,40}$">
               </div>
               <div [hidden]="carForm.controls['description']?.valid" class="alert alert-danger" role="alert">
-                The description must be at least 5 letters!
+                The description must be at least 10 letters!
               </div>
             </div>
           </div>
@@ -75,7 +77,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                <input type="number" class="form-control" name="price" required pattern="^[0-9]{1,5}$">
+                <input type="number" class="form-control" name="price" required pattern="^[0-9]{1,10}$">
               </div>
               <div [hidden]="carForm.controls['price']?.valid" class="alert alert-danger" role="alert">
                 The price cannot be empty!
