@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CarsComponent } from './page/cars/cars.component';
 import { CategoryComponent } from './page/category/category.component';
 import { ConnectComponent } from './page/connect/connect.component';
+import { NewCarComponent } from './page/new-car/new-car.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'ConnectUs',
     component: ConnectComponent,
+  },
+  {
+    path: 'AddNewCar',
+    component: NewCarComponent,
   },
 ];
 

@@ -10,6 +10,7 @@ import { CategoryComponent } from './page/category/category.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ConnectComponent } from './page/connect/connect.component';
+import { NewCarComponent } from './page/new-car/new-car.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ConnectComponent } from './page/connect/connect.component';
     CarsComponent,
     CategoryComponent,
     ConnectComponent,
+    NewCarComponent,
 
   ],
   imports: [
