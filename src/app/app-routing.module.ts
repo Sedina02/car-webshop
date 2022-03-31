@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CarsComponent } from './page/cars/cars.component';
 import { CategoryComponent } from './page/category/category.component';
+import { ConnectComponent } from './page/connect/connect.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'Categories',
     component: CategoryComponent,
+  },
+  {
+    path: 'ConnectWithUs',
+    component: ConnectComponent,
   },
 ];
 

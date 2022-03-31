@@ -9,6 +9,7 @@ import { CarsComponent } from './page/cars/cars.component';
 import { CategoryComponent } from './page/category/category.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ConnectComponent } from './page/connect/connect.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { CommonModule } from '@angular/common';
     HomeComponent,
     CarsComponent,
     CategoryComponent,
+    ConnectComponent,
 
   ],
   imports: [
