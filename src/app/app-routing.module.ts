@@ -19,7 +19,7 @@ const routes: Routes = [
     component: CategoryComponent,
   },
   {
-    path: 'ConnectWithUs',
+    path: 'ConnectUs',
     component: ConnectComponent,
   },
 ];
