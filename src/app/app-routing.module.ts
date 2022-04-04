@@ -21,7 +21,7 @@ const routes: Routes = [
     component: CategoryComponent,
   },
   {
-    path: 'ConnectUs',
+    path: 'ContactUs',
     component: ConnectComponent,
   },
   {
