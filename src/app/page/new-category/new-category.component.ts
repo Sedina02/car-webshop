@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Category } from 'src/app/model/category';
+import { CategoryService } from 'src/app/service/category.service';
 
 @Component({
   selector: 'app-new-category',
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewCategoryComponent implements OnInit {
 
-  constructor() { }
+  category: Category = new Category();
+
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private categoryService: CategoryService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+    this.activatedRoute.params.subscribe((params) => {
+      this.categoryService
+        .get(params['id'])
+        .subscribe((category) => (this.category = category));
+    });
+  }
+
+  onCreate(category: Category) {
+    this.categoryService.create(this.category).subscribe(() =>
+    this.router.navigate(['Categories']))
   }
 
 }

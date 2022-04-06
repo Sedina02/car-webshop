@@ -26,13 +26,11 @@
       <div class="card-body">
         <form #categoryForm="ngForm">
           <input type="hidden" name="id">
-
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
                 <label class="bmd-label-floating h5 text-secondary">Name *</label>
-                <input type="text" class="form-control" name="name" required
-                  pattern="^[a-űA-Ű]{3,20}$">
+                <input type="text" class="form-control" name="name" required pattern="^[a-űA-Ű]{3,20}$">
               </div>
               <div [hidden]="categoryForm.controls['name']?.valid" class="alert alert-danger" role="alert">
                 The name must be at least 3 letters!
@@ -44,17 +42,16 @@
             <div class="col-md-12">
               <div class="form-group">
                 <label class="bmd-label-floating h5 text-secondary">Description *</label>
-                <input type="text" class="form-control" name="description" required
-                  pattern="^[a-űA-Ű ][0-9]{10,20}$">
+                <input type="text" class="form-control" name="description" required pattern="^[a-űA-Ű ][0-9]{10,20}$">
               </div>
               <div [hidden]="categoryForm.controls['description']?.valid" class="alert alert-danger" role="alert">
                 The description must be at least 10 letters!
               </div>
             </div>
           </div>
-          <button [disabled]="categoryForm.invalid" type="submit" class="btn btn-primary pull-right">
-            Create Category
-          </button>
+          <button *ngIf="category.id===0" (click)="onCreate(category)" [disabled]="categoryForm.invalid" type="submit"
+            class="btn btn-primary pull-right">Create
+            Category</button>
           <div class="clearfix"></div>
         </form>
       </div>

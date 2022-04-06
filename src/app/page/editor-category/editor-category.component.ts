@@ -26,7 +26,7 @@ export class EditorCategoryComponent implements OnInit {
     });
   }
 
-  onSubmit() {
+  onUpdate() {
     this.categoryService.update(this.category).subscribe(() =>
     this.router.navigate(['']))
   }
