@@ -26,7 +26,7 @@ export class EditorCarComponent implements OnInit {
     });
   }
 
-  onSubmit() {
+  onUpdate() {
     this.carService.update(this.car).subscribe(() =>
     this.router.navigate(['']))
   }
