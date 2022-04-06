@@ -21,10 +21,6 @@ export class CarsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onCreate(){
-    this.router.navigate(['Create']);
-  }
-
   onDelete(id: number){
     this.carService.delete(id).subscribe(()=> {
       this.cars$ = this.carService.getAll();

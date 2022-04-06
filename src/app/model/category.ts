@@ -3,4 +3,3 @@ export class Category {
   name: string = "";
   description: string = "";
 }
-//{"id":1,"name":"Sedan","description":"lorem ipsumm"}

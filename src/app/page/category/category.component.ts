@@ -21,10 +21,6 @@ export class CategoryComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onCreate(){
-    this.router.navigate(['Create']);
-  }
-
   onDelete(id: number){
     this.categoryService.delete(id).subscribe(()=> {
       this.category$ = this.categoryService.getAll();

@@ -26,8 +26,9 @@ export class EditorCategoryComponent implements OnInit {
     });
   }
 
-  onUpdate() {
-    this.categoryService.update(this.category).subscribe(() =>
-    this.router.navigate(['']))
+  onUpdate(category: Category) {
+    this.categoryService.update(category).subscribe(
+      (category) => this.router.navigate(['Categories']),
+    );
   }
 }
