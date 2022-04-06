@@ -7,7 +7,7 @@ import { Car } from '../model/car';
   providedIn: 'root'
 })
 export class CarService {
-  url: string = "";
+  url: string = "https://nettuts.hu/jms/ninjaturtles/cars";
 
   constructor(
     private http: HttpClient

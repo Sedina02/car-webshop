@@ -12,6 +12,8 @@ import { CommonModule } from '@angular/common';
 import { ConnectComponent } from './page/connect/connect.component';
 import { NewCarComponent } from './page/new-car/new-car.component';
 import { NewCategoryComponent } from './page/new-category/new-category.component';
+import { EditorCategoryComponent } from './page/editor-category/editor-category.component';
+import { EditorCarComponent } from './page/editor-car/editor-car.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { NewCategoryComponent } from './page/new-category/new-category.component
     ConnectComponent,
     NewCarComponent,
     NewCategoryComponent,
+    EditorCategoryComponent,
+    EditorCarComponent,
 
   ],
   imports: [

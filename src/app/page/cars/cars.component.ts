@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Car } from 'src/app/model/car';
+import { CarService } from 'src/app/service/car.service';
 
 @Component({
   selector: 'app-cars',
@@ -7,9 +11,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarsComponent implements OnInit {
 
-  constructor() { }
+  cars$: Observable<Car[]>=this.carService.getAll();
+
+  constructor(
+    private carService: CarService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  onCreate(){
+    this.router.navigate(['Create']);
+  }
+
+  onDelete(id: number){
+    this.carService.delete(id).subscribe(()=> {
+      this.cars$ = this.carService.getAll();
+    })
+  }
+  onEdit(){
+    this.router.navigate(['EditorCar']);
   }
 
 }

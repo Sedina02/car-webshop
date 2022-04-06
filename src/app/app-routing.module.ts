@@ -6,6 +6,8 @@ import { CategoryComponent } from './page/category/category.component';
 import { ConnectComponent } from './page/connect/connect.component';
 import { NewCarComponent } from './page/new-car/new-car.component';
 import { NewCategoryComponent } from './page/new-category/new-category.component';
+import { EditorCategoryComponent } from './page/editor-category/editor-category.component';
+import { EditorCarComponent } from './page/editor-car/editor-car.component';
 
 const routes: Routes = [
   {
@@ -31,6 +33,14 @@ const routes: Routes = [
   {
     path: 'AddNewCategory',
     component: NewCategoryComponent,
+  },
+  {
+    path: 'EditorCategory',
+    component: EditorCategoryComponent,
+  },
+  {
+    path: 'EditorCar',
+    component: EditorCarComponent,
   },
 ];
 

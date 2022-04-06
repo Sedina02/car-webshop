@@ -20,3 +20,38 @@
     Add new Car
   </button>
 </div>
+<div class="container">
+  <div class="table-responsive">
+    <table class="table">
+      <thead class="text-primary">
+        <th>#</th>
+        <th>Model</th>
+        <th>Make</th>
+        <th>Year</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Featured</th>
+        <th></th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let car of cars$ | async">
+          <td>{{ car.id }}</td>
+          <td>{{ car.model }}</td>
+          <td>{{ car.make }}</td>
+          <td>{{ car.year }}</td>
+          <td>{{ car.price }}</td>
+          <td>{{ car.stock }}</td>
+          <td>{{ car.active }}</td>
+          <td>
+            <button (click)="onDelete(car.id)" class="btn btn-danger">
+              <i class="fa fa-trash"></i>
+            </button>
+            <button class="btn btn-warning" (click)="onEdit()">
+              <i class="fa fa-save"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
