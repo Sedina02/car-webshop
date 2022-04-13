@@ -35,11 +35,11 @@ const routes: Routes = [
     component: NewCategoryComponent,
   },
   {
-    path: 'EditorCategory',
+    path: 'EditorCategory/:id',
     component: EditorCategoryComponent,
   },
   {
-    path: 'EditorCar',
+    path: 'EditorCar/:id',
     component: EditorCarComponent,
   },
 ];

@@ -1,1 +1,18 @@
-<router-outlet></router-outlet>
+<div class="wrapper">
+  <div class="main-panel">
+    <!-- Navbar -->
+    <app-header></app-header>
+    <!-- End Navbar -->
+    <div class="content">
+      <div class="container-fluid">
+        <!-- your content here -->
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+    <footer class="footer dark p-3">
+      <div class="content">
+        <p class="copyright text-center"> Copyright © 2022. Panda Cars. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+</div>

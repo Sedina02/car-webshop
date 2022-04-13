@@ -26,8 +26,8 @@ export class CarsComponent implements OnInit {
       this.cars$ = this.carService.getAll();
     })
   }
-  onEdit(){
-    this.router.navigate(['EditorCar']);
+  onEdit(id: number){
+    this.router.navigate(['EditorCar/' + id]);
   }
 
 }

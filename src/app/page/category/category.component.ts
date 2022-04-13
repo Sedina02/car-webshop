@@ -26,8 +26,8 @@ export class CategoryComponent implements OnInit {
       this.category$ = this.categoryService.getAll();
     })
   }
-  onEdit(){
-    this.router.navigate(['EditorCategory']);
+  onEdit(id: number){
+    this.router.navigate(['EditorCategory/'+ id]);
   }
 
 }

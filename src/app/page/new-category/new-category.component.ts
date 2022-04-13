@@ -19,11 +19,7 @@ export class NewCategoryComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe((params) => {
-      this.categoryService
-        .get(params['id'])
-        .subscribe((category) => (this.category = category));
-    });
+
   }
 
   onCreate(category: Category) {

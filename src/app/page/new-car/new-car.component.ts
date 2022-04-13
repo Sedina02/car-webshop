@@ -19,11 +19,7 @@ export class NewCarComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe((params) => {
-      this.carService
-        .get(params['id'])
-        .subscribe((car) => (this.car = car));
-    });
+
   }
 
   onCreate(car: Car) {

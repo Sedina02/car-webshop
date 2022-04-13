@@ -14,6 +14,7 @@ import { NewCarComponent } from './page/new-car/new-car.component';
 import { NewCategoryComponent } from './page/new-category/new-category.component';
 import { EditorCategoryComponent } from './page/editor-category/editor-category.component';
 import { EditorCarComponent } from './page/editor-car/editor-car.component';
+import { HeaderComponent } from './common/header/header.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { EditorCarComponent } from './page/editor-car/editor-car.component';
     NewCategoryComponent,
     EditorCategoryComponent,
     EditorCarComponent,
+    HeaderComponent,
 
   ],
   imports: [

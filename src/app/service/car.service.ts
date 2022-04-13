@@ -30,6 +30,7 @@ export class CarService {
   }
 
   create(Car: Car): Observable<Car> {
+    console.log(Car);
     return this.http.post<Car>(this.url, Car);
   }
 }

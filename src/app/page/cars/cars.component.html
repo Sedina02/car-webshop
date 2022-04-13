@@ -1,20 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-  <a class="navbar-brand font-italic pr-5" id="pandaCars" routerLink="/">
-    <img src="assets\img\asad.png" alt="panda" height="50" class="pr-2">
-    Panda Cars
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-link" routerLink="/">Home  <span class="sr-only">(current)</span></a>
-      <a class="nav-link active" routerLink="/Cars">Cars</a>
-      <a class="nav-link" routerLink="/Categories">Categories</a>
-      <a class="nav-link" routerLink="/ContactUs">Contact Us</a>
-    </div>
-  </div>
-</nav>
+
 <div class="d-flex justify-content-center py-5">
   <button type="button" class="btn btn-primary col-10" routerLink="/AddNewCar">
     Add new Car
@@ -43,11 +27,11 @@
           <td>{{ car.stock }}</td>
           <td>{{ car.active }}</td>
           <td>
-            <button (click)="onDelete(car.id)" class="btn btn-danger">
-              <i class="fa fa-trash"></i>
+            <button class="btn btn-warning" (click)="onEdit(car.id)">
+              Edit<i class="fa fa-save"></i>
             </button>
-            <button class="btn btn-warning" (click)="onEdit()">
-              <i class="fa fa-save"></i>
+            <button (click)="onDelete(car.id)" class="btn btn-danger">
+              Delete<i class="fa fa-trash"></i>
             </button>
           </td>
         </tr>
@@ -55,9 +39,3 @@
     </table>
   </div>
 </div>
-
-<footer class="footer dark p-3">
-  <div class="content">
-    <p class="copyright text-center"> Copyright © 2022. Panda Cars. All rights reserved.</p>
-  </div>
-</footer>
